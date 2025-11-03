@@ -1,5 +1,7 @@
 # ==============================================================
 # 
+#   .tcl ( Tool Command Language ) file 
+#
 # ==============================================================
 set_db init_lib_search_path /home/iiitdmk/Desktop
 # === Library Search Paths ===
