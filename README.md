@@ -4,6 +4,7 @@ A high-speed, area-efficient hardware multiplier designed using the Dadda reduct
 
    📌 This project implements and analyzes an optimized 8-bit Dadda multiplier with synthesis reports for Area, Timing, and Power.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Project Objective :
@@ -18,6 +19,7 @@ Design and synthesize a hardware-efficient 8×8 Dadda multiplier targeting VLSI 
 
    -->  Structured logic for stable physical implementation
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 About Dadda Algorithm
 
@@ -74,6 +76,7 @@ This project implements an efficient 8×8 Dadda multiplier by :
 
    *   Producing final 16-bit output using structured carry propagation
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
      
 
 ✅ Why Dadda Algorithm ?
