@@ -110,11 +110,11 @@ It uses a staged compression approach, reducing height gradually for optimal spe
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Report Analysis
+## Report Analysis
 
 This section summarizes the synthesis results (Area, Timing, and Power) for the Dadda 8×8 Multiplier synthesized using Cadence Genus.
 
-## 🔧 Area Summary
+### 🔧 Area Summary
 
 Area report ( .rpt file ) : (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/area_report.rpt)
 | Metric       | Value                |
@@ -126,7 +126,7 @@ Area report ( .rpt file ) : (https://github.com/dinesh-jonnalagadda/8-x-8-multip
 | Condition    | Slow Corner          |
 
 
-## ⏱️ Timing Summary
+### ⏱️ Timing Summary
 
 Timing report ( .rpt file ) : (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/timing_report.rpt)
 | Metric           | Value              |
@@ -137,7 +137,7 @@ Timing report ( .rpt file ) : (https://github.com/dinesh-jonnalagadda/8-x-8-mult
 | Operating Corner | Slow / Worst-Case  |
 
 
-## ⚡ Power Summary
+### ⚡ Power Summary
 
 Power report ( .rpt file ) :  (https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/main/reports/power_report.rpt)
 | Power Type      | Value                      | Share |
@@ -148,7 +148,7 @@ Power report ( .rpt file ) :  (https://github.com/dinesh-jonnalagadda/8-x-8-mult
 | **Total Power** | **6.63 × 10⁻⁵ W (≈66 µW)** | 100%  |
 
 
-## 📊  Overall Design Efficiency
+### 📊  Overall Design Efficiency
 
 | Metric                  | Value                        | Remarks                    |
 | ----------------------- | ---------------------------- | -------------------------- |
@@ -158,7 +158,7 @@ Power report ( .rpt file ) :  (https://github.com/dinesh-jonnalagadda/8-x-8-mult
 | Design Type             | Semi-Custom (Cadence Genus)  | Synthesized successfully   |
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 3D layout view :
+## 3D layout view :
 <img width="1266" height="933" alt="Screenshot from 2025-11-02 10-46-08" src="https://github.com/user-attachments/assets/1e098a22-f186-4846-8796-8088dc91dd94" />
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
