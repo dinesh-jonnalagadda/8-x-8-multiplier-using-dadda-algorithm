@@ -21,13 +21,14 @@ Design and synthesize a hardware-efficient 8×8 Dadda multiplier targeting VLSI 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 About Dadda Algorithm
 
 The Dadda multiplier is a fast hardware multiplication structure that minimizes the number of adders needed for partial product reduction.
 It uses a staged compression approach, reducing height gradually for optimal speed-area trade-off.
 
 
-Key features :
+ Key features :
 
 | Feature          | Explanation                                              |
 | ---------------- | -------------------------------------------------------- |
@@ -38,10 +39,18 @@ Key features :
 | Final stage      | CPA for 2-row sum                                        |
 | Benefit          | Faster than array multiplier, less hardware than Wallace |
 
+📌 Why Dadda Algorithm ?
 
+   *   Uses fewer adders compared to Wallace multipliers
+
+   *   Maintains high speed with controlled wiring complexity
+
+   *   Ideal for VLSI / ASIC / FPGA implementations
+
+   *   Demonstrates deep structural digital logic handling
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-✅ Why dadda algorithm multiplier is considered among other multipliers  ?
+📌 Why dadda algorithm multiplier is considered among other multipliers  ?
 
 | Feature          |         Dadda Multiplier                | Wallace Tree                         | Array Multiplier            | Booth Multiplier                            |
 | ---------------- | --------------------------------------- | ------------------------------------ | --------------------------- | ------------------------------------------- |
@@ -66,7 +75,7 @@ Key features :
 
 
 
-This project implements an efficient 8×8 Dadda multiplier by :
+📌 This project implements an efficient 8×8 Dadda multiplier by :
 
    *   Generating 64 partial products
 
@@ -77,28 +86,28 @@ This project implements an efficient 8×8 Dadda multiplier by :
    *   Producing final 16-bit output using structured carry propagation
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Design Flow
      
+📌 cadence  ->  RTL Coding  ->  Testbench ->  Simulation  ->  Synthesis  →  Area/Timing/Power Reports  -> layout -> gds file
 
-✅ Why Dadda Algorithm ?
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   *   Uses fewer adders compared to Wallace multipliers
+code links : 
 
-   *   Maintains high speed with controlled wiring complexity
-
-   *   Ideal for VLSI / ASIC / FPGA implementations
-
-   *   Demonstrates deep structural digital logic handling
+   -->  Verilog ( .v file ) :
 
 
+   -->  Testbench ( .v file ) :
 
+   -->  TCL file ( .tcl file ) :
+   
+   -->  Input_Constraints ( .sdc file ) :
 
-
-
-
-
-
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+RTL simulation :
+<img width="1166" height="781" alt="Screenshot from 2025-11-02 10-14-25" src="https://github.com/user-attachments/assets/1aa337da-79d6-4eee-a4fd-df62a3ec65b5" />
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Report Analysis
 
@@ -143,3 +152,5 @@ This section summarizes the synthesis results (Area, Timing, and Power) for the 
 | Critical Path Delay     | Within constraint            | Timing closure achieved    |
 | Total Power             | 6.63×10⁻⁵ W                  | Very low power             |
 | Design Type             | Semi-Custom (Cadence Genus)  | Synthesized successfully   |
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
