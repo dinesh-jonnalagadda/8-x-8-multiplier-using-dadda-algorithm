@@ -100,7 +100,7 @@ code links :
 
    -->  Testbench ( .v file ) :
 
-   -->  TCL file ( .tcl file ) :      https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/f0cbdc6c9b7ca20deccd1e07405060136181d454/run.tcl
+   -->  TCL file ( .tcl file ) :     ( https://github.com/dinesh-jonnalagadda/8-x-8-multiplier-using-dadda-algorithm/blob/f0cbdc6c9b7ca20deccd1e07405060136181d454/run.tcl )
    
    -->  Input_Constraints ( .sdc file ) : 
 
