@@ -1,8 +1,8 @@
-🚀 Dadda Algorithm Based 8×8 Multiplier
+Dadda Algorithm Based 8×8 Multiplier
 
 A high-speed, area-efficient hardware multiplier designed using the Dadda reduction tree, implemented and synthesized in Cadence RTL-to-GDS flow as part of a semi-custom VLSI design project.
 
-       📌 This project implements and analyzes an optimized 8-bit Dadda multiplier with synthesis reports for Area, Timing, and Power.
+   📌 This project implements and analyzes an optimized 8-bit Dadda multiplier with synthesis reports for Area, Timing, and Power.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
