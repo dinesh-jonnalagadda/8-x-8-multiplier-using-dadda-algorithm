@@ -4,9 +4,28 @@ A high-speed, area-efficient hardware multiplier designed using the Dadda reduct
 
    📌 This project implements and analyzes an optimized 8-bit Dadda multiplier with synthesis reports for Area, Timing, and Power.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Key points :
+
+Project Objective :
+
+Design and synthesize a hardware-efficient 8×8 Dadda multiplier targeting VLSI applications, focusing on:
+
+   -->  High speed (low delay)
+
+   -->  Reduced area compared to Wallace tree
+
+   -->  Optimized power for ASIC design
+
+   -->  Structured logic for stable physical implementation
+
+
+About Dadda Algorithm
+
+The Dadda multiplier is a fast hardware multiplication structure that minimizes the number of adders needed for partial product reduction.
+It uses a staged compression approach, reducing height gradually for optimal speed-area trade-off.
+
+
+Key features :
 
 | Feature          | Explanation                                              |
 | ---------------- | -------------------------------------------------------- |
@@ -18,6 +37,30 @@ Key points :
 | Benefit          | Faster than array multiplier, less hardware than Wallace |
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ Why dadda algorithm multiplier is considered among other multipliers  ?
+
+| Feature          |         Dadda Multiplier                | Wallace Tree                         | Array Multiplier            | Booth Multiplier                            |
+| ---------------- | --------------------------------------- | ------------------------------------ | --------------------------- | ------------------------------------------- |
+| Key Idea         | Optimized partial-product reduction     | Aggressive partial-product reduction | Direct summation array      | Encoded multiplication to reduce operations |
+| Speed            | **Very High**                           | Very High                            | Low                         | Medium-High                                 |
+| Hardware Usage   | **Moderate (optimized)**                | High                                 | Low                         | Medium                                      |
+| Area Requirement | **Low-Medium**                          | High                                 | **Lowest**                  | Medium                                      |
+| Routing & Layout | **Better structured, easier placement** | Complex routing                      | Very regular                | Moderate                                    |
+| Best Use Case    | **Speed + Area balance (ASIC/VLSI)**    | Maximum speed priority               | Low-cost, low-power designs | Signed multiplication & DSP                 |
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔧 Dadda Reduction Stages (8×8 Multiplier) 
+
+| Stage           | Operation                        | Goal Height      | What Happens in Code                                            |
+| --------------- | -------------------------------- | ---------------- | --------------------------------------------------------------- |
+|  Stage-0        | Partial Product Generation       | 8 → input matrix | `pp[i] = A & {8{B[i]}};`                                        |
+|  Stage-1        | First compression                | Reduce to ≤ 6    | First layer of **HA/FA** to shrink tallest columns              |
+|  Stage-2        | Second compression               | Reduce to ≤ 4    | Deeper **FA chain** to bring product matrix height further down |
+|  Stage-3        | Final partial-product reduction  | Reduce to ≤ 3    | Remaining **FA/HA** to get only 2 rows                          |
+|  Final Stage    | Final addition                   | 2 → 1            | Ripple/CPA add: `assign P = row1 + row2;`                       |
 
 
 
@@ -46,29 +89,10 @@ This project implements an efficient 8×8 Dadda multiplier by :
 
 
 
-✅ Why dadda algorithm multiplier is considered among other multipliers  ?
-
-| Feature          |         Dadda Multiplier                | Wallace Tree                         | Array Multiplier            | Booth Multiplier                            |
-| ---------------- | --------------------------------------- | ------------------------------------ | --------------------------- | ------------------------------------------- |
-| Key Idea         | Optimized partial-product reduction     | Aggressive partial-product reduction | Direct summation array      | Encoded multiplication to reduce operations |
-| Speed            | **Very High**                           | Very High                            | Low                         | Medium-High                                 |
-| Hardware Usage   | **Moderate (optimized)**                | High                                 | Low                         | Medium                                      |
-| Area Requirement | **Low-Medium**                          | High                                 | **Lowest**                  | Medium                                      |
-| Routing & Layout | **Better structured, easier placement** | Complex routing                      | Very regular                | Moderate                                    |
-| Best Use Case    | **Speed + Area balance (ASIC/VLSI)**    | Maximum speed priority               | Low-cost, low-power designs | Signed multiplication & DSP                 |
 
 
 
 
-🧠 Dadda Reduction Stages (8×8 Multiplier) 
-
-| Stage           | Operation                       | Goal Height      | What Happens in Code                                            |
-| --------------- | ------------------------------- | ---------------- | --------------------------------------------------------------- |
-| **Stage-0**     | **Partial Product Generation**  | 8 → input matrix | `pp[i] = A & {8{B[i]}};`                                        |
-| **Stage-1**     | First compression               | Reduce to ≤ 6    | First layer of **HA/FA** to shrink tallest columns              |
-| **Stage-2**     | Second compression              | Reduce to ≤ 4    | Deeper **FA chain** to bring product matrix height further down |
-| **Stage-3**     | Final partial-product reduction | Reduce to ≤ 3    | Remaining **FA/HA** to get only 2 rows                          |
-| **Final Stage** | Final addition                  | 2 → 1            | Ripple/CPA add: `assign P = row1 + row2;`                       |
 
 
 
