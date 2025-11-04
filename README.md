@@ -100,9 +100,9 @@ code links :
 
    -->  Testbench ( .v file ) :
 
-   -->  TCL file ( .tcl file ) :
+   -->  TCL file ( .tcl file ) :      run.tcl
    
-   -->  Input_Constraints ( .sdc file ) :
+   -->  Input_Constraints ( .sdc file ) : 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 RTL simulation :
