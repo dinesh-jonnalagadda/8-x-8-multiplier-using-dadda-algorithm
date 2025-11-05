@@ -1,8 +1,10 @@
-# 8 x 8 Multiplier Design using Dadda Algorithm - Low Power , High speed , Area efficient
+# 8 x 8 Multiplier Design using Dadda Algorithm - Low Power , High speed , Area efficient : RTL -> GDSll
 
-A high-speed, area-efficient hardware multiplier designed using the Dadda reduction tree, implemented and synthesized in Cadence RTL-to-GDS flow as part of a semi-custom VLSI design project.
+## Introduction
 
-   📌 This project implements and analyzes an optimized 8-bit Dadda multiplier with synthesis reports for Area, Timing, and Power.
+This project implements an 8-bit Dadda multiplier, a high-speed hardware multiplication architecture used in modern digital and VLSI systems. The Dadda algorithm reduces partial products in a structured and optimized manner, requiring fewer adders than Wallace tree multipliers while maintaining similar performance. This makes it a highly efficient choice for ASIC and FPGA arithmetic designs.
+
+The design is written in Verilog and follows a semi-custom VLSI flow, including simulation, synthesis, and analysis of timing, power, and area using Cadence tools. The goal of this project is to achieve a compact, fast, and power-efficient multiplier architecture suitable for integration into processors, DSP units, and high-performance embedded systems.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -160,9 +162,26 @@ Power report ( .rpt file ) :  (https://github.com/dinesh-jonnalagadda/8-x-8-mult
 | Design Type             | Semi-Custom (Cadence Genus)  | Synthesized successfully   |
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Layout
+
+![WhatsApp Image 2025-11-05 at 16 13 41_f12f68cd](https://github.com/user-attachments/assets/ecb0fd4c-d9f6-482c-b297-014d7ce03aca)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 3D layout view :
 <img width="1266" height="933" alt="Screenshot from 2025-11-02 10-46-08" src="https://github.com/user-attachments/assets/1e098a22-f186-4846-8796-8088dc91dd94" />
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Tools and Technologies used
+| Category                      | Tools / Technologies                               |
+| ----------------------------- | -------------------------------------------------- |
+| Hardware Description Language |  Verilog HDL (2001 Standard)                       |
+| Simulation                    |  Cadence NCSim / NCLaunch                          |
+| Logic Synthesis               |  Cadence Genus Synthesis Solution                  |
+| Place & Route                 |  Cadence Innovus Implementation System             |
+| Technology Node               |  90 nm CMOS Standard Cell Library                  |
+| Verification                  |  Functional Simulation, STA (Setup/Hold), DRC, LVS |
+| Reports & Debugging           |  Waveforms, Timing Reports, Area/Power Analysis    |
+| GDS Export                    |  Innovus Stream Out (GDSII Generation)             |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Conclusion 
 
