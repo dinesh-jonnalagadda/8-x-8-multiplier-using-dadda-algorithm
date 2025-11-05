@@ -1,4 +1,4 @@
-# Low Power 8 Bit Multiplier Design using Dadda Algorithm
+# Low Power 8 x 8 Multiplier Design using Dadda Algorithm
 
 A high-speed, area-efficient hardware multiplier designed using the Dadda reduction tree, implemented and synthesized in Cadence RTL-to-GDS flow as part of a semi-custom VLSI design project.
 
@@ -64,6 +64,8 @@ It uses a staged compression approach, reducing height gradually for optimal spe
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🔧 Dadda Reduction Stages (8×8 Multiplier) 
+<img width="1164" height="988" alt="Screenshot 2025-11-04 231444" src="https://github.com/user-attachments/assets/cd32c766-c19f-4f54-88c4-a0857ba8d8b4" />
+
 
 | Stage           | Operation                        | Goal Height      | What Happens in Code                                            |
 | --------------- | -------------------------------- | ---------------- | --------------------------------------------------------------- |
@@ -79,7 +81,7 @@ It uses a staged compression approach, reducing height gradually for optimal spe
 
    *   Generating 64 partial products
 
-   *   Reducing matrix height in controlled stages (6 → 4 → 3 → 2)
+   *   Reducing matrix height in controlled stages (6 → 4 → 3 → 2 → 1)
 
    *   Using only Full/Half adders for compression
 
